@@ -2,6 +2,8 @@
 
 # db
 
+Bu repository diğer servisleri etkilememek amacıyla Hybrone Sentinel Akbank projesi için açılmıştır.
+
 DB is open a connection to database. DB could send data to  new relic.
 
 Supported databases:
