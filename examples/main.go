@@ -1,28 +1,3 @@
-![Version](https://img.shields.io/badge/version-1.3.0-yellow.svg)
-
-# db
-
-DB is open a connection to database. DB could send data to  new relic.
-
-Supported databases:
-
-- Mongo
-
-##  Set your env
-
-Configuration is getting from your shell.
-
-```bash
-export GO_ENV=development
-export MONGO_DB_URI=mongo://localhost:27017
-export MONGO_DB_DEBUG_MODE=true
-export MONGO_DB_NAME=my_awsome_db
-export MONGO_DB_TIMEOUT=10
-```
-
-## Usage
-
-```go
 package main
 
 import (
@@ -32,6 +7,7 @@ import (
 	"github.com/fatih/structs"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
+	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
 type Obj struct {
@@ -101,34 +77,3 @@ func main() {
 		log.Fatal(err)
 	}
 }
-```
-
----
-
-## Rake Tasks
-
-```bash
-$ rake -T
-
-rake default                    # show avaliable tasks (default task)
-rake docker:build               # Build
-rake release:check              # do release check
-rake release:publish[revision]  # Publish project with revision: major,minor,patch, default: patch
-rake serve_doc[port]            # run doc server at :port (default: 6060)
-rake test[verbose]              # run tests
-rake verify[tag]                # Verify package by tag
-```
-
----
-
-## Publish New Version
-
-```bash
-$ rake release:check
-
-$ rake release:publish               # patch level -> 1.0.0 => 1.0.1
-$ rake release:publish[minor]        # minor level -> 1.0.0 => 1.1.0
-$ rake release:publish[major]        # major level -> 1.0.0 => 2.0.0
-
-$ rake verify
-```
