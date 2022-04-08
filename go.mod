@@ -1,4 +1,4 @@
-module github.com/biges/db
+module github.com/biges/mongo-db
 
 go 1.16
 

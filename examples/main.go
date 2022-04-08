@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"github.com/biges/db"
+	"github.com/biges/mongo-db"
 	"github.com/fatih/structs"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"

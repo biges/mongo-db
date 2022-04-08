@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/biges/db/cnf"
+	"github.com/biges/mongo-db/cnf"
 	"github.com/biges/logger"
 	nr "github.com/biges/newrelic"
 	"github.com/newrelic/go-agent/v3/integrations/nrmongo"
